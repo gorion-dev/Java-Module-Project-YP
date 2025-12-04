@@ -28,10 +28,10 @@ public class Race {
     private String readName() {
         String name;
         while (true) {
-            System.out.println("Введите название машины №" + (carCounter + 1) + ":");
+            System.out.println("Enter the name of the car №" + (carCounter + 1) + ":");
             name = scanner.nextLine();
             if (name.trim().isEmpty()) {
-                System.out.println("Название машины не должно быть пустым!");
+                System.out.println("The car name must not be empty!");
             } else {
                 break;
             }
@@ -42,18 +42,18 @@ public class Race {
     private int readSpeed() {
         int speed;
         while (true) {
-            System.out.println("Введите скорость машины №" + (carCounter + 1) + ":");
+            System.out.println("Enter the speed of the car №" + (carCounter + 1) + ":");
             String input = scanner.nextLine();
             try {
                 speed = Integer.parseInt(input);
                 if (speed >= MIN_SPEED && speed <= MAX_SPEED) {
                     break;
                 } else {
-                    System.out.println("Скорость машины должна быть в диапазоне от: " +
-                    MIN_SPEED + " до: " + MAX_SPEED + "!");
+                    System.out.println("The speed of the car should be in the range from: " +
+                    MIN_SPEED + " to: " + MAX_SPEED + "!");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Скорость машины должна быть целым числом!");
+                System.out.println("The speed of the car must be an integer!");
             }
         }
         return speed;
@@ -71,6 +71,6 @@ public class Race {
     }
 
     private void printWinner() {
-        System.out.println("Самая быстрая машина: " + leaderName);
+        System.out.println("The fastest car is: " + leaderName);
     }
 }
