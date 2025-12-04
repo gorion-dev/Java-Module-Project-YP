@@ -1,6 +1,6 @@
 public class Car {
-    private String name;
-    private int speed;
+    private final String name;
+    private final int speed;
 
     public Car(String name, int speed) {
         this.name = name;
@@ -11,15 +11,7 @@ public class Car {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getSpeed() {
         return speed;
-    }
-
-    public void setSpeed(int speed) {
-        this.speed = speed;
     }
 }
