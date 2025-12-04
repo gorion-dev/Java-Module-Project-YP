@@ -63,10 +63,10 @@ public class Race {
         if (car == null) {
             return;
         }
-        int distance = car.getSpeed() * RACE_TIME;
+        int distance = car.speed * RACE_TIME;
         if (distance > leaderDistance) {
             leaderDistance = distance;
-            leaderName = car.getName();
+            leaderName = car.name;
         }
     }
 
