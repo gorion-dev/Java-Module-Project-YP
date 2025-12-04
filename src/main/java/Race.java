@@ -29,8 +29,8 @@ public class Race {
         String name;
         while (true) {
             System.out.println("Enter the name of the car №" + (carCounter + 1) + ":");
-            name = scanner.nextLine();
-            if (name.trim().isEmpty()) {
+            name = scanner.nextLine().trim();
+            if (name.isEmpty()) {
                 System.out.println("The car name must not be empty!");
             } else {
                 break;
